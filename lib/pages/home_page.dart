@@ -7,10 +7,19 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.green,
-          elevation: 5,
-          shadowColor: Colors.black,
-          title: const Text("Hello!")),
+        title: const Text("Hello!"),
+      ),
+      body: Column(
+        children: [
+          Card(
+            child: Padding(
+              // ignore: prefer_const_constructors
+              padding: EdgeInsets.all(8.0),
+              child: Image.asset("images/rocket.png"),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
