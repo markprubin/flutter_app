@@ -25,7 +25,19 @@ class DescriptionPage extends StatelessWidget {
                       fontSize: 200, fontWeight: FontWeight.bold),
                 ),
               ),
-              const Text(baconDescription),
+              const Text(
+                baconDescription,
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.justify,
+              ),
+              const SizedBox(
+                height: kDouble10,
+              ),
+              const Text(
+                baconDescription,
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.justify,
+              ),
             ],
           ),
         ),
