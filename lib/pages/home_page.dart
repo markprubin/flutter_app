@@ -22,19 +22,19 @@ class HomePage extends StatelessWidget {
                 Expanded(
                   child: CardWidget(
                     box: ItemClass(
-                        title: "Rocket", imagePath: "images/rocket.png"),
+                        title: "Travel", imagePath: "images/travel.png"),
                   ),
                 ),
                 Expanded(
                   child: CardWidget(
                     box: ItemClass(
-                        title: "Rocket", imagePath: "images/rocket.png"),
+                        title: "Space", imagePath: "images/space.png"),
                   ),
                 ),
               ],
             ),
             CardWidget(
-              box: ItemClass(title: "Rocket", imagePath: "images/rocket.png"),
+              box: ItemClass(title: "Yeah", imagePath: "images/yeah.png"),
             ),
           ],
         ),
