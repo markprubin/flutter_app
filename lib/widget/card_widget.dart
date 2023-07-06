@@ -19,7 +19,9 @@ class CardWidget extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return const DescriptionPage();
+              return DescriptionPage(
+                box: box,
+              );
             },
           ),
         );
