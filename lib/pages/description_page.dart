@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/class/item_class.dart';
 import 'package:flutter_app/core/constants.dart';
-import 'package:flutter_app/widget/card_widget.dart';
 
 class DescriptionPage extends StatefulWidget {
   const DescriptionPage({super.key, required this.box});
@@ -18,7 +17,22 @@ class _DescriptionPageState extends State<DescriptionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.box.title)),
+      appBar: AppBar(
+        title: Text(widget.box.title),
+        actions: [
+          IconButton(
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text("Hello"),
+                  behavior: SnackBarBehavior.floating,
+                ),
+              );
+            },
+            icon: const Icon(Icons.info),
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(kDouble10),
