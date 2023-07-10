@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/core/constants.dart';
+import 'package:flutter_app/core/notifiers.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -30,6 +31,21 @@ class ProfilePage extends StatelessWidget {
             title: Text("www.fluttermapp.com"),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          isDarkModeNotifier.value = !isDarkModeNotifier.value;
+        },
+        child: ValueListenableBuilder(
+          valueListenable: isDarkModeNotifier,
+          builder: (context, isDark, child) {
+            if (!isDark) {
+              return const Icon(Icons.dark_mode);
+            } else {
+              return const Icon(Icons.light_mode);
+            }
+          },
+        ),
       ),
     );
   }
